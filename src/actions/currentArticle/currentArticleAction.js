@@ -1,3 +1,14 @@
-/**
- * Created by Artsiom_Papou on 1/16/2017.
- */
+export default function backToNewsList() {
+    return function (dispatch) {
+        fetch("http://localhost:3030/articles")
+            .then(response => {
+                return response.json()
+            })
+            .then(articles => {
+                dispatch({
+                    type: "FETCH_ARTICLES_COMPLETE",
+                    payload: articles
+                })
+            });
+    }
+}
