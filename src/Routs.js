@@ -4,10 +4,7 @@ import App from './App'
 import Home from './pages/Home/Home'
 import Article from './components/NewsList/Article';
 import Provider from 'react-redux';
-import createStore from 'redux';
-
-const store = createStore(App);
-
+import store from './';
 
 export default class Routs extends React.Component {
     render() {
@@ -16,7 +13,7 @@ export default class Routs extends React.Component {
                 <Router history={browserHistory}>
                     <Route path="/" component={App}>
                         <IndexRoute component={Home}/>
-                        <Route path="article" component={Article} />
+                        <Route path="article" component={Article}/>
                     </Route>
                 </Router>
             </Provider>

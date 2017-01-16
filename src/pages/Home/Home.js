@@ -13,7 +13,7 @@ class Home extends Component {
     }
 
 
-    componentDidMount() {
+    componentWillMount() {
         store.getS
         //event start fatch
         // fetch("http://localhost:3030/articles")

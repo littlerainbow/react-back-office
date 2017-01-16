@@ -4,7 +4,6 @@ import './Article.css';
 class Article extends Component {
 
 
-
     render() {
         return (
             <div>

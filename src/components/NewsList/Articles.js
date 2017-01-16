@@ -10,7 +10,7 @@ class Articles extends Component {
                 {
                     this.props.articles.map(({title, content, author}, i) => {
                         return (
-                            <Article key={i} title={title} content={content} />
+                            <Article key={i} title={title} content={content}/>
                         )
                     })
                 }
