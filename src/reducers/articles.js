@@ -12,7 +12,8 @@ export default function articles(state = {
                 ...state,
                 articles: action.payload,
                 fetched: true,
-                fetching: false
+                fetching: false,
+                error: null
             }
         case 'FETCH_ARTICLES':
             return {

@@ -1,5 +1,5 @@
 export default function backToNewsList() {
-    return function (dispatch) {
+    return function () {
         fetch("http://localhost:3030/articles")
             .then(response => {
                 return response.json()

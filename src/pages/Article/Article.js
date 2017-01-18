@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from "redux";
 
 class Article extends Component {
 
@@ -20,10 +21,14 @@ class Article extends Component {
 
     render() {
         return (
-            {<Article article={this.props.article} />}
-        );
+            <Article article={this.props.article} />
+        )
     }
 }
 
-export default Article;
+function mapStateToProps(state) {
+    return { article: state.article.articleIndex }
+}
+
+export default connect(mapStateToProps)(Article);
 
