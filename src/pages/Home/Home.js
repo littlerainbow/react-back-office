@@ -1,15 +1,19 @@
 import React, {Component} from 'react';
 import NewsList from "./../../components/NewsList/Articles";
-import
+import {connect} from "react-redux";
 
+
+function mapStateToProps(store) {
+    return { articles: store.articles.articlesList }
+}
 
 class Home extends Component {
 
     constructor(){
         super();
-        this.state = {
-            articles: []
-        }
+        // this.state = {
+        //     articles: []
+        // }
     }
 
 
@@ -26,10 +30,12 @@ class Home extends Component {
 
     render() {
         return (
-            <NewsList articles={this.state.articles} />
+            <NewsList articles={this.props.articles} />
         );
     }
 }
 
-export default Home;
+export default connect(mapStateToProps)(Home);
+
+
 

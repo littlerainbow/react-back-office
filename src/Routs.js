@@ -3,8 +3,9 @@ import React from 'react'
 import App from './App'
 import Home from './pages/Home/Home'
 import Article from './components/NewsList/Article';
-import Provider from 'react-redux';
-import store from './';
+import {Provider} from 'react-redux';
+import store from './store/createStore';
+console.log(store,Provider,Article,Home)
 
 export default class Routs extends React.Component {
     render() {
