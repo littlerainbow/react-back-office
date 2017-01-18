@@ -10,7 +10,7 @@ export default function articles(state = {
         case 'FETCH_ARTICLES_COMPLETE':
             return {
                 ...state,
-                articles: action.payload,
+                articlesList: action.payload,
                 fetched: true,
                 fetching: false,
                 error: null

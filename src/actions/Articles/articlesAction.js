@@ -14,7 +14,7 @@ export function toCurrentArticle(id) {
 }
 export function getArticles() {
     return function (dispatch) {
-        console.log(11)
+
         dispatch({
             type: 'FETCH_ARTICLES'
         });
