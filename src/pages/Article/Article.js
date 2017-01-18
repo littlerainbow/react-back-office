@@ -20,7 +20,7 @@ class Article extends Component {
 
     render() {
         return (
-            {/*<Article article={this.state.article} />*/}
+            {<Article article={this.props.article} />}
         );
     }
 }
