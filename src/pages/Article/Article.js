@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "redux";
+import ArticleP from "./Article/Article";
+import './NewsList/Articles.css';
 
 class Article extends Component {
 
@@ -8,20 +10,23 @@ class Article extends Component {
 
     }
 
-
     componentWillMount() {
-        // fetch(`http://localhost:3030/${this.props.params.id}`)
-        //     .then(response => {
-        //         return response.json()
-        //     })
-        //     .then(articles => {
-        //         this.setState({articles})
-        //     });
+        fetch(`http://localhost:3030/articles/${id}`)
+            .then(response => {
+                return response.json()
+            })
+            .then(article => {
+                dispatch({
+                    type: "FETCH_ARTICLE_COMPLETE",
+                    payload: article
+                })
+            });
     }
 
     render() {
+        console.log(this.props)
         return (
-            <Article article={this.props.article} />
+            <ArticleP currentArticle={this.props.currentArticle} />
         )
     }
 }

@@ -2,17 +2,8 @@ import React, {Component} from 'react';
 import './App.css';
 import Layout from "./components/Layout/Layout"
 import "./components/Layout/Layout.css"
-import { connect } from 'react-redux'
 
-function mapStateToProps (store) {
-    return {
-        articles: store.articles.articlesList,
-        currentArticle: store.currentArticle.articleIndex
-    }
-}
-
-
-class App extends Component {
+export default class App extends Component {
     render() {
         return (
             <Layout>
@@ -21,7 +12,4 @@ class App extends Component {
         );
     }
 }
-
-
-export default connect(mapStateToProps)(App)
 

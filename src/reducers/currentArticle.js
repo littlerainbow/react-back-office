@@ -1,4 +1,4 @@
-export default function articles(state = {
+export default function article (state = {
     currentArticle: {
         fetching: false,
         fetched: false,

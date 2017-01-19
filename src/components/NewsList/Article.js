@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router'
 import './Article.css';
 
 class Article extends Component {
@@ -8,7 +9,12 @@ class Article extends Component {
     render() {
         return (
             <div>
-                <h1>ferf</h1>
+                <article>
+                    <h1>{this.props.title}</h1>
+                    <p>{this.props.content}</p>
+                    <p className="article-author">{this.props.author}</p>
+                    <span className="article-more"><Link to="/article">Read More</Link></span>
+                </article>
             </div>
         );
     }
