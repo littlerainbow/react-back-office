@@ -24,9 +24,8 @@ class Article extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
-            <ArticleP currentArticle={this.props.currentArticle} />
+            <ArticleP currentArticle={this.props.currentArticle} title={this.props.currentArticle.title} />
         )
     }
 }

@@ -13,7 +13,7 @@ class Article extends Component {
                     <h1>{this.props.title}</h1>
                     <p>{this.props.content}</p>
                     <p className="article-author">{this.props.author}</p>
-                    <span className="article-more"><Link to="/article">Read More</Link></span>
+                    <span className="article-more"><Link to={"/articles/" + this.props.id}>Read More</Link></span>
                 </article>
             </div>
         );

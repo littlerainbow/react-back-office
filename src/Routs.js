@@ -14,7 +14,10 @@ export default class Routs extends React.Component {
                 <Router history={browserHistory}>
                     <Route path="/" component={App}>
                         <IndexRoute component={Home}></IndexRoute>
-                        <Route path="article" component={Article}></Route>
+
+                        <Route path="articles" component={Article}>
+                            <Route path=":id" component={Article}></Route>
+                        </Route>
                     </Route>
                 </Router>
             </Provider>

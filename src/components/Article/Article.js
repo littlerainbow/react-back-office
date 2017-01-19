@@ -7,13 +7,14 @@ class Article extends Component {
 		super()
 	}
     render() {
+        console.log(this.props)
         return (
             <div>
                 <article>
                     <h1>{this.props.title}</h1>
                     <p>{this.props.content}</p>
                     <p className="article-author">{this.props.author}</p>
-                    <span className="article-more"><Link to="/article">Read More</Link></span>
+                    <span className="article-more"><Link to={"/" + this.props.id}>Back</Link></span>
                 </article>
             </div>
         );
